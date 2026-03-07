@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍗 Pollos a la Brasa Suárez - El Sabor que te Encanta</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo" onclick="navigateTo('home')">
+                    <div class="logo-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Pollos Suárez</h1>
+                        <span class="logo-tagline">El Sabor que te Encanta</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('home')" id="nav-home" class="active">Inicio</a></li>
+                        <li><a href="#" onclick="navigateTo('menu')" id="nav-menu">Menú</a></li>
+                        <li><a href="#" onclick="navigateTo('about')" id="nav-about">Nosotros</a></li>
+                        <li><a href="#" onclick="navigateTo('contact')" id="nav-contact">Contacto</a></li>
+                        <li><a href="#" onclick="navigateTo('login')" id="nav-login" class="btn-login-nav">Login</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#" onclick="navigateTo('home'); toggleMobileMenu();"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#" onclick="navigateTo('menu'); toggleMobileMenu();"><i class="fas fa-utensils"></i> Menú</a></li>
+            <li><a href="#" onclick="navigateTo('about'); toggleMobileMenu();"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+            <li><a href="#" onclick="navigateTo('contact'); toggleMobileMenu();"><i class="fas fa-envelope"></i> Contacto</a></li>
+            <li><a href="#" onclick="navigateTo('login'); toggleMobileMenu();"><i class="fas fa-user"></i> Mi Cuenta</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- ==================== HOME SECTION ==================== -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <h2>🍗 El Sabor que te Encanta</h2>
+            <p>Pollos a la brasa preparados con la receta tradicional y el mejor sazón peruano. Más de 15 años deleitando a las familias limeñas con el auténtico sabor del pollo a la brasa.</p>
+            <button class="btn btn-primary" onclick="navigateTo('menu')">
+                <i class="fas fa-utensils"></i> Ver Menú
+            </button>
+            <button class="btn btn-outline" onclick="navigateTo('contact')">
+                <i class="fas fa-phone"></i> Hacer Pedido
+            </button>
+        </div>
+
+        <h3 class="section-title">¿Por Qué Elegirnos?</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                <h3>Cocción a la Brasa</h3>
+                <p>Preparados tradicionalmente al carbón para un sabor auténtico y jugoso que nos caracteriza.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3>Entrega Rápida</h3>
+                <p>Llevamos tu pedido caliente y fresco en menos de 45 minutos a tu domicilio.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>Calidad Garantizada</h3>
+                <p>Ingredientes frescos y de la mejor calidad seleccionados diariamente.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                <h3>Receta Familiar</h3>
+                <p>Más de 15 años deleitando a familias con nuestra receta especial y secreta.</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Productos Destacados</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600" alt="Pollo Entero">
+                <div class="menu-item-content">
+                    <h3>Pollo Entero a la Brasa</h3>
+                    <p>Pollo entero marinado con especias secretas, acompañado de papas fritas, ensalada y cremas.</p>
+                    <div class="price">S/ 45.00</div>
+                    <button class="btn btn-primary" onclick="navigateTo('menu')">
+                        <i class="fas fa-cart-plus"></i> Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600" alt="Medio Pollo">
+                <div class="menu-item-content">
+                    <h3>Medio Pollo</h3>
+                    <p>Medio pollo a la brasa con guarnición a elegir: papas fritas, yuca o camote. Incluye ensalada.</p>
+                    <div class="price">S/ 25.00</div>
+                    <button class="btn btn-primary" onclick="navigateTo('menu')">
+                        <i class="fas fa-cart-plus"></i> Pedir Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MENU SECTION ==================== -->
+    <section id="menu" class="section">
+        <h3 class="section-title">Nuestro Menú</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600" alt="Pollo Entero">
+                <div class="menu-item-content">
+                    <h3>Pollo Entero a la Brasa</h3>
+                    <p>Pollo entero marinado con especias secretas, acompañado de papas fritas, ensalada y cremas.</p>
+                    <div class="price">S/ 45.00</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-cart-plus"></i> Agregar al Pedido
+                    </button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600" alt="Medio Pollo">
+                <div class="menu-item-content">
+                    <h3>Medio Pollo</h3>
+                    <p>Medio pollo a la brasa con guarnición a elegir: papas fritas, yuca o camote. Incluye ensalada.</p>
+                    <div class="price">S/ 25.00</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-cart-plus"></i> Agregar al Pedido
+                    </button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1604908176997-125fef2b527d?w=600" alt="Combo Familiar">
+                <div class="menu-item-content">
+                    <h3>Combo Familiar</h3>
+                    <p>2 pollos enteros, 1 kg de papas fritas, 2 ensaladas grandes y 4 gaseosas de 1.5L.</p>
+                    <div class="price">S/ 95.00</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-cart-plus"></i> Agregar al Pedido
+                    </button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1576867757117-44d5a24495f1?w=600" alt="Churrasco">
+                <div class="menu-item-content">
+                    <h3>Churrasco</h3>
+                    <p>Jugoso churrasco de res con papas fritas, huevo, plátano frito y ensalada.</p>
+                    <div class="price">S/ 32.00</div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-cart-plus"></i> Agregar al Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section">
+        <h3 class="section-title">Nosotros</h3>
+        <div class="about-content">
+            <div class="about-card">
+                <h3><i class="fas fa-store"></i> Nuestra Historia</h3>
+                <p><strong>Pollos a la Brasa Suárez</strong> nació como un sueño familiar en Lima, Perú. Lo que comenzó como un pequeño emprendimiento en 2009 se ha convertido en un referente del auténtico pollo a la brasa limeño.</p>
+                <p>Nos especializamos en brindar una experiencia gastronómica única, combinando la tradición de la cocina peruana con un servicio moderno y eficiente.</p>
+            </div>
+
+            <div class="about-card">
+                <h3><i class="fas fa-bullseye"></i> Misión, Visión y Valores</h3>
+                <div class="mvv-grid">
+                    <div class="mvv-card">
+                        <h4><i class="fas fa-bullseye"></i> Misión</h4>
+                        <p>Brindar pollos a la brasa de la más alta calidad con un servicio rápido y cordial, superando las expectativas de nuestros clientes.</p>
+                    </div>
+                    <div class="mvv-card">
+                        <h4><i class="fas fa-eye"></i> Visión</h4>
+                        <p>Ser el restaurante de pollos a la brasa más reconocido de Lima por nuestra calidad, sabor y servicio excepcional.</p>
+                    </div>
+                    <div class="mvv-card">
+                        <h4><i class="fas fa-gem"></i> Valores</h4>
+                        <p>Calidad, Honestidad, Compromiso y Tradición en cada plato que servimos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h3><i class="fas fa-users"></i> Nuestro Equipo</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">JS</div>
+                        <h4>Jorge Suárez</h4>
+                        <p>CEO & Fundador</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">MC</div>
+                        <h4>María Castro</h4>
+                        <p>Chef Principal</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">RL</div>
+                        <h4>Ricardo López</h4>
+                        <p>Gerente</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">AP</div>
+                        <h4>Ana Pérez</h4>
+                        <p>Atención al Cliente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section">
+        <h3 class="section-title">Contáctanos</h3>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <span><strong>Responsable:</strong> Jorge Suárez</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Dirección:</strong> Av. Los Pollos 1234, Lima, Perú</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span><strong>Teléfono:</strong> +51 1 234 5678</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span><strong>Email:</strong> pedidos@pollossuarez.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span><strong>Horario:</strong> Lun-Dom: 12:00 PM - 10:00 PM</span>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.0!2d-77.0!3d-12.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzAwLjAiUyA3N8KwMDAnMDAuMCJX!5e0!3m2!1ses!2spe!4v1600000000000!5m2!1ses!2spe" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3><i class="fas fa-paper-plane"></i> Envíanos un Mensaje</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" required placeholder="Ingresa tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="999 888 777">
+                    </div>
+                    <div class="form-group">
+                        <label>Asunto</label>
+                        <select required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="pedido">Hacer un Pedido</option>
+                            <option value="reserva">Reserva de Mesa</option>
+                            <option value="sugerencia">Sugerencia/Queja</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea required placeholder="Escribe tu mensaje..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+                <div class="text-center mt-30">
+                    <button class="btn btn-outline" onclick="navigateTo('home')">
+                        <i class="fas fa-arrow-left"></i> Volver al Inicio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOGIN SECTION ==================== -->
+    <section id="login" class="section">
+        <div class="auth-container">
+            <div class="auth-box">
+                <i class="fas fa-drumstick-bite auth-icon"></i>
+                <h2>Iniciar Sesión</h2>
+                <p>Accede a tu cuenta para hacer pedidos rápidos y ver tu historial</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-sign-in-alt"></i> Ingresar
+                    </button>
+                </form>
+                <p class="mt-30" style="color: var(--gris);">
+                    ¿No tienes cuenta? <a href="#" onclick="navigateTo('register')" style="color: var(--rojo-brasa); font-weight: bold;">Regístrate aquí</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REGISTER SECTION ==================== -->
+    <section id="register" class="section">
+        <div class="auth-container">
+            <div class="auth-box">
+                <i class="fas fa-user-plus auth-icon"></i>
+                <h2>Crear Cuenta</h2>
+                <p>Únete y recibe ofertas especiales en tu correo</p>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirmar contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-user-plus"></i> Registrarse
+                    </button>
+                </form>
+                <p class="mt-30" style="color: var(--gris);">
+                    ¿Ya tienes cuenta? <a href="#" onclick="navigateTo('login')" style="color: var(--rojo-brasa); font-weight: bold;">Inicia sesión</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DASHBOARD SECTION ==================== -->
+    <section id="dashboard" class="section dashboard-section">
+        <div class="dashboard-header">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2>Bienvenido, Jorge Suárez</h2>
+            <p><i class="fas fa-envelope"></i> jorge@pollossuarez.com</p>
+        </div>
+
+        <h3 class="section-title">Mis Estadísticas</h3>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>15</h3>
+                <p>Pedidos Realizados</p>
+            </div>
+            <div class="stat-card">
+                <h3>S/ 450</h3>
+                <p>Total Gastado</p>
+            </div>
+            <div class="stat-card">
+                <h3>150</h3>
+                <p>Puntos de Fidelidad</p>
+            </div>
+            <div class="stat-card">
+                <h3>3</h3>
+                <p>Pedidos Pendientes</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Historial de Pedidos</h3>
+        <div class="orders-list">
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-id"><i class="fas fa-receipt"></i> Pedido #001</span>
+                    <span class="order-status status-entregado">Entregado</span>
+                </div>
+                <p class="order-details"><i class="fas fa-utensils"></i> 2 Pollos Enteros a la Brasa</p>
+                <p class="order-details"><i class="fas fa-calendar"></i> 15 de Enero 2024</p>
+                <div class="order-total">S/ 90.00</div>
+            </div>
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-id"><i class="fas fa-receipt"></i> Pedido #002</span>
+                    <span class="order-status status-en-camino">En Camino</span>
+                </div>
+                <p class="order-details"><i class="fas fa-utensils"></i> Combo Familiar</p>
+                <p class="order-details"><i class="fas fa-calendar"></i> 20 de Febrero 2024</p>
+                <div class="order-total">S/ 95.00</div>
+            </div>
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-id"><i class="fas fa-receipt"></i> Pedido #003</span>
+                    <span class="order-status status-pendiente">Pendiente</span>
+                </div>
+                <p class="order-details"><i class="fas fa-utensils"></i> Medio Pollo con guarnición</p>
+                <p class="order-details"><i class="fas fa-calendar"></i> 10 de Marzo 2024</p>
+                <div class="order-total">S/ 25.00</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-30">
+            <button class="btn btn-primary" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+            </button>
+            <button class="btn btn-outline" onclick="navigateTo('home')">
+                <i class="fas fa-home"></i> Volver al Inicio
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>Pollos Suárez</h3>
+                </div>
+                <p>El auténtico sabor del pollo a la brasa limeño desde 2009. Calidad, tradición y buen sabor en cada bocado.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#" onclick="navigateTo('home')">Inicio</a></li>
+                    <li><a href="#" onclick="navigateTo('menu')">Menú</a></li>
+                    <li><a href="#" onclick="navigateTo('about')">Nosotros</a></li>
+                    <li><a href="#" onclick="navigateTo('contact')">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> pedidos@pollossuarez.com</p>
+                <p><i class="fas fa-phone"></i> +51 1 234 5678</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Los Pollos 1234, Lima</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Pollos a la Brasa Suárez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
