@@ -29,5 +29,3 @@ Pollos a la Brasa Suárez es una aplicación web moderna y responsive diseñada 
 - **JavaScript**: Interactividad y navegación
 - **Font Awesome**: Iconos profesionales
 - **Google Fonts**: Tipografías Pacifico y Roboto
-
-## 📦 Estructura del Proyecto
